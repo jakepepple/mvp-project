@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/mvpapp');
+mongoose.connect('mongodb://jake:bronson93@ds125994.mlab.com:25994/whats-my-time');
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', () => {
@@ -12,7 +12,7 @@ db.once('open', () => {
 
 
 const app = express();
-app.use('/static', express.static(path.join(__dirname, 'client')))
+app.use(express.static('client'))
 
 const port = process.env.PORT;
 
