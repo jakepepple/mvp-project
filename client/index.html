@@ -6,10 +6,12 @@
     <script src="./app/usernameController.js"></script>
   </head>
   <body>
-    <div ng-controller="usernameController">
-      <input ng-model="username">
-      {{user(username)}}
-      </div>
+    <form ng-controller="usernameController" ng-submit="submit()">
+      Login
+      <input ng-model="username" placeholder={{username}}>
+      <input type="submit">
+      {{userMessage}}
+      </form>
 
   </body>
 </html>

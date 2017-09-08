@@ -1,5 +1,10 @@
 myApp.controller('usernameController', ['$scope', function($scope) {
-  $scope.user = function(username) {
-    return `You have successfully logged in as ${username}`;
+  $scope.user = '';
+  $scope.userMessage = '';
+  $scope.submit = function() {
+    if ($scope.username) {
+      $scope.user = $scope.username;
+      $scope.userMessage = `You have successfully logged in as ${$scope.user}`;
+    }
   }
 }])
