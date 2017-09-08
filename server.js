@@ -3,12 +3,12 @@ const express = require('express');
 const path = require('path');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://jake:bronson93@ds125994.mlab.com:25994/whats-my-time');
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', () => {
-  console.log('Database successfully connected')
-})
+mongoose.connect('mongodb://jake:bronson93@ds125994.mlab.com:25994/whats-my-time')
+  .then(
+    () => {console.log('connection to database successful')},
+    err => {console.error(err)}
+  );
+
 
 
 const app = express();
