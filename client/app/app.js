@@ -1,6 +1,6 @@
 const myApp = angular.module('myApp', ['ngRoute']).
-  config(['$routeProvider',
-    function config($routeProvider) {
+  config(['$routeProvider', '$sceDelegateProvider',
+    function config($routeProvider, $sceDelegateProvider) {
       
 
       $routeProvider.
@@ -26,6 +26,12 @@ const myApp = angular.module('myApp', ['ngRoute']).
           templateUrl: "../views/videoList.htm"
         }).
         otherwise('/login');
+
+      $sceDelegateProvider.resourceUrlWhitelist([
+        'self',
+        'https://www.youtube.com/**',
+        'https://www.googleapis.com/**'
+      ]);
     }]);
 
   
