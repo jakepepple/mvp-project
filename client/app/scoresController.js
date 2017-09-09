@@ -3,7 +3,7 @@ myApp.controller("scoresController", ['$scope', '$http', function($scope, $http)
   $http.get('/scores', {})
     .then((response) => {
       
-      $scope.scores = response.data
+      $scope.scores = response.data;
     }, (err) => {
       console.log("scoresController error:", err);
     })

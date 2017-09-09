@@ -28,7 +28,7 @@ app.post('/users', (req, res) => {
 })
 
 app.get('/scores', (req, res) => {
-  User.find({}, (err, users) => {
+  User.find({}, null, {sort: {bestScore: 1}}, (err, users) => {
     if (err) {
       console.error(err);
     } else {

@@ -10,13 +10,14 @@
     <script src="./app/gameController.js"></script>
   </head>
   <body>
+    <h1>What's My Time?</h1>
     <div class="login">
       <form ng-controller="usernameController" ng-submit="submit()">
         Login
         <input ng-model="username" placeholder="Enter username here">
         <input ng-model="password" type='password' placeholder="Enter password here">
         <input type="submit">
-        {{userMessage}}
+        <p class="loginMessage">{{userMessage}}</p>
       </form>
     </div>
     <hr>
