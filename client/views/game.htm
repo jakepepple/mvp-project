@@ -1,6 +1,9 @@
 <div class="gamebox" ng-controller="gameController">
   <h2>How Good Is Your Time?</h2>
 
-  <input type="submit" value="Play the game!" ng-click="gameStart(); gameStyle={'animation-duration': '.5s', 'animation-name': 'bounce', 'animation-iteration-count': '20', 'animation-delay': '3s', 'animation-direction': 'alternate'}">
-  <div class="screenPrompt" ng-style="gameStyle">{{screenPrompt}}</div>
-  </div>
+  <input type="submit" value="Play the game!" ng-click="gameStart(); gameStyle={'color': 'black', 'animation-duration': '.5s', 'animation-name': 'bounce', 'animation-iteration-count': '20', 'animation-delay': '2.5s', 'animation-direction': 'alternate'}">
+  <div class="screenPrompt" ng-click="userKeyPress()" ng-style="gameStyle">{{screenPrompt}}</div>
+  <div ng-keypress="userKeyPress()"></div>
+  <div>{{computerResults}}</div>
+  <div>{{userResults}}</div>
+</div>
