@@ -4,7 +4,7 @@ const db = require('./db-config');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
-const user = db.User;
+const User = db.User;
 
 const app = express();
 app.use(express.static('client'))
@@ -16,12 +16,33 @@ app.get('/', (req, res) => {
 
 app.post('/users', (req, res) => {
   console.log(req.body);
-  const newUser = new user(req.body);
+  const newUser = new User(req.body);
   newUser.save(err => {
     if (err) {
       console.error(err);
     } else {
       console.log('successfully posted');
+      res.send("success")
+    }
+  })
+})
+
+app.get('/scores', (req, res) => {
+  User.find({}, (err, users) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log(users);
+
+      let mappedResponse = users.map(userObj => {
+        console.log(userObj);
+        return {
+          username: userObj.username,
+          bestScore: userObj.bestScore
+        }
+      })
+      res.send(mappedResponse);
+
     }
   })
 })

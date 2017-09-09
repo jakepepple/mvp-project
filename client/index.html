@@ -2,24 +2,27 @@
 <html ng-app="myApp">
   <head>
     <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-route/angular-route.js"></script>
     <script src="./app/app.js"></script>
     <script src="./app/usernameController.js"></script>
+    <script src="./app/scoresController.js"></script>
   </head>
   <body>
     <div class="login">
       <form ng-controller="usernameController" ng-submit="submit()">
         Login
         <input ng-model="username" placeholder="Enter username here">
-        <input ng-model="password" placeholder="Enter password here">
+        <input ng-model="password" type='password' placeholder="Enter password here">
         <input type="submit">
         {{userMessage}}
       </form>
     </div>
     <hr>
     <nav>
-    <a href="/game">Game</a>
-    <a href="/scores">Leaderboard</a>
+      <a href="/game">Game</a>
+      <a href="/scores">Leaderboard</a>
     </nav>
+    
 
   </body>
 </html>

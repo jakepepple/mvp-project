@@ -10,13 +10,13 @@ myApp.controller('usernameController', ['$scope', '$http', function($scope, $htt
         bestScore: 0
         })
       .then((response) => {
+        console.log(response)
         $scope.username = '';
         $scope.password = '';
-          console.log(response);
-      }, () => {
-        console.log("failed to post");
+      }, (error) => {
+        console.log(error);
       })
-
+      
     }
   }
 }])
