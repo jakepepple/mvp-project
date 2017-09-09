@@ -1,27 +1,29 @@
 .screenPrompt {
   margin-top: 100px;
-  background: rebeccapurple;
-  color: rebeccapurple;
+  background: green;
+  color: green;
   margin-left: 25%;
   margin-right: 25%;
   border-radius: 20px;
   max-width: 50%;
-  animation-duration: .5s;
+  /* animation-duration: .5s;
   animation-name: bounce;
   animation-iteration-count: 20;
   animation-delay: 3s;
-  animation-direction: alternate
+  animation-direction: alternate */
 }
 
 @keyframes bounce {
   from {
-    margin-bottom: 0px
-    
+    margin-bottom: 0px;
+    background: green;
+    color: green;
   }
 
   to {
     margin-bottom: 200px;
-    
+    background: red;
+    color: red;
   }
 }
 
