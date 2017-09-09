@@ -10,6 +10,7 @@ const db = mongoose.connection;
 
 const userSchema = new mongoose.Schema({
   username: String,
+  password: String,
   bestScore: Number
 })
 
