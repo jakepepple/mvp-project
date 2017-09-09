@@ -1,0 +1,30 @@
+.screenPrompt {
+  margin-top: 100px;
+  background: rebeccapurple;
+  color: rebeccapurple;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 20px;
+  max-width: 50%;
+  animation-duration: .5s;
+  animation-name: bounce;
+  animation-iteration-count: 20;
+  animation-delay: 3s;
+  animation-direction: alternate
+}
+
+@keyframes bounce {
+  from {
+    margin-bottom: 0px
+    
+  }
+
+  to {
+    margin-bottom: 200px;
+    
+  }
+}
+
+.gamebox {
+  border-bottom: 2px solid black
+}
