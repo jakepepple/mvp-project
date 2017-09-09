@@ -15,7 +15,6 @@ app.get('/', (req, res) => {
 })
 
 app.post('/users', (req, res) => {
-  console.log(req.body);
   const newUser = new User(req.body);
   newUser.save(err => {
     if (err) {
@@ -28,6 +27,7 @@ app.post('/users', (req, res) => {
 })
 
 app.get('/scores', (req, res) => {
+  
   User.find({}, null, {sort: {bestScore: 1}}, (err, users) => {
     if (err) {
       console.error(err);
@@ -40,6 +40,17 @@ app.get('/scores', (req, res) => {
       })
       res.send(mappedResponse);
 
+    }
+  })
+})
+
+app.get('/myscores', (req, res) => {
+  const username = req.query.user;
+  User.findOne({username: username}, (err, user) => {
+    if (err) {
+      console.error(err);
+    } else {
+      res.send(user);
     }
   })
 })
