@@ -1,16 +1,22 @@
 myApp.controller('usernameController', ['$scope', '$http', function($scope, $http) {
-  $scope.user = '';
   $scope.userMessage = '';
   $scope.submit = function() {
     if ($scope.username) {
-      $scope.user = $scope.username;
-      $scope.userMessage = `You have successfully logged in as ${$scope.user}`;
+      
+      $scope.userMessage = `You have successfully logged in as ${$scope.username}`;
       $http.post('/users', {
-        username: $scope.user,
+        username: $scope.username,
+        password: $scope.password,
         bestScore: 0
-        }).then(() => {
-        
-      }, () => {})
+        })
+      .then((response) => {
+        $scope.username = '';
+        $scope.password = '';
+          console.log(response);
+      }, () => {
+        console.log("failed to post");
+      })
+
     }
   }
 }])
