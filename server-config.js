@@ -26,18 +26,30 @@ app.post('/users', (req, res) => {
   })
 })
 
+app.put('/users', (req, res) => {
+  console.log(req.body);
+  User.findOneAndUpdate({username: window.username}, req.body, (err, response) => {
+    if (err) {
+      console.error(err);
+    } else {
+      res.send(response);
+    }
+  })
+})
+
 app.get('/scores', (req, res) => {
   
   User.find({}, null, {sort: {bestScore: 1}}, (err, users) => {
     if (err) {
       console.error(err);
     } else {
-      let mappedResponse = users.map(userObj => {  
+      let mappedResponse = users.map(userObj => {
+
         return {
           username: userObj.username,
           bestScore: userObj.bestScore
         }
-      })
+      }).filter(userObject => userObject.bestScore > 0);
       res.send(mappedResponse);
 
     }

@@ -1,6 +1,7 @@
-myApp.controller("videoListController", ['$scope', '$http', 'youTube', function ($scope, $http, youTube) {
+myApp.controller("videoListController", ['$window', '$scope', '$http', 'youTube', function ($window, $scope, $http, youTube) {
   $scope.videoList = "future video list"
-  let query = $scope.searchQuery || "improve timing";
+  $scope.diagnostic = $window.diagnostic;
+  let query = $window.searchQuery || "improve timing";
   
   youTube.search({
     q: query,
@@ -8,6 +9,7 @@ myApp.controller("videoListController", ['$scope', '$http', 'youTube', function 
     key: 'AIzaSyDyPBWXIuHIeMH9gN-th6bVzJropzkjFpo',
     part: 'snippet'
   }, (response) => {
+    console.log(response.data.items);
     $scope.videoList = response.data.items;
   })
   

@@ -3,6 +3,8 @@ myApp.controller("gameController", ['$window', '$scope', '$http', '$interval', '
   $scope.userResults = [];
   $scope.computerResults = [];
   $scope.resultMessage = "";
+  $window.diagnostic = "You haven't played the game yet! Go play and come back for personalized results.";
+  $window.query;
   let averageMsOff;
   
   const calculateMsOff = (userResults, computerResults) => {
@@ -26,11 +28,24 @@ myApp.controller("gameController", ['$window', '$scope', '$http', '$interval', '
         avgDiff = -avgDiff;
       }
       $scope.resultMessage = `Great job! Your timing was within ${avgDiff} milliseconds of the computer. Keep trying for a better score though!`;
+      $window.diagnostic = "Keep practicing!"
     } else if (avgDiff < -100) {
       $scope.resultMessage = `Your timing was late by an average of ${-avgDiff} milliseconds. Go check out the videos tab to see resources for improvement.`;
+      $window.diagnostic = "Tendency to be late. Work on not slowing down with these videos:";
+      $window.query = "Work on dragging time tendencies";
     } else if (avgDiff > 100) {
       $scope.resultMessage = `Your timing was early by an average of ${avgDiff} milliseconds. Go check out the videos tab to see resources for improvement.`
+      $window.diagnostic = "Tendency to be early. Work on not rushing with these videos:";
+      $window.query = "Work on rushing tendency";
     }
+  }
+
+  const postResults = (result) => {
+    $http.put('/users', {
+      bestScore: result
+    }).then((response) => {
+      console.log('successful put');
+    })
   }
 
   $scope.gameStart = function() {
@@ -53,14 +68,7 @@ myApp.controller("gameController", ['$window', '$scope', '$http', '$interval', '
           } else {
             let avgDiff = calculateMsOff($scope.userResults, $scope.computerResults);          
             renderResultMessage(avgDiff);
-
-            $http({
-              url: '/myscores',
-              method: 'GET',
-              params: {username: $window.username}
-            }).then(user => {
-              console.log(user.data);
-            })
+            postResults(avgDiff);
           }
         }, 1000)
       });
