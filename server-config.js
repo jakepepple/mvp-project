@@ -27,24 +27,21 @@ app.post('/users', (req, res) => {
   })
 })
 
-app.get('/scores', (req, res) => {
-  User.find({}, (err, users) => {
-    if (err) {
-      console.error(err);
-    } else {
-      console.log(users);
+// app.get('/scores', (req, res) => {
+//   User.find({}, (err, users) => {
+//     if (err) {
+//       console.error(err);
+//     } else {
+//       let mappedResponse = users.map(userObj => {  
+//         return {
+//           username: userObj.username,
+//           bestScore: userObj.bestScore
+//         }
+//       })
+//       res.send(mappedResponse);
 
-      let mappedResponse = users.map(userObj => {
-        console.log(userObj);
-        return {
-          username: userObj.username,
-          bestScore: userObj.bestScore
-        }
-      })
-      res.send(mappedResponse);
-
-    }
-  })
-})
+//     }
+//   })
+// })
 
 module.exports = app;
