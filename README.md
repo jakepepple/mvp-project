@@ -1,4 +1,4 @@
-# Project Name #
+# MVP Project #
 
 <!-- 
 > This material was originally posted [here](http://www.quora.com/What-is-Amazons-approach-to-product-development-and-product-management). It is reproduced here for posterities sake.
@@ -16,46 +16,46 @@ Oh, and I also like to write press-releases in what I call "Oprah-speak" for mai
 Once the project moves into development, the press release can be used as a touchstone; a guiding light. The product team can ask themselves, "Are we building what is in the press release?" If they find they're spending time building things that aren't in the press release (overbuilding), they need to ask themselves why. This keeps product development focused on achieving the customer benefits and not building extraneous stuff that takes longer to build, takes resources to maintain, and doesn't provide real customer benefit (at least not enough to warrant inclusion in the press release).
  -->
  
-## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
+## What's My Time? ##
+  <!-- > Name the product in a way the reader (i.e. your target customers) will understand.
 
-  Introducing "What's My Time?"
+  Introducing "What's My Time?" -->
 
-## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+<!-- ## Sub-Heading ##
+  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title. -->
 
   An app that analyzes your timing through a game interface, and coaches you appropriately based on your results.
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+  <!-- > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good. -->
 
   What's My Time (WMT) is a web-based app that helps users discover how consistent their timing and reflexes are through a game-like interface. After their results are reported, WMT coaches users to improve their results by curating YouTube lessons for their specific needs.  All results are saved to a user profile, so users can come back to the app to try to improve their best scores.  
 
 ## Problem ##
-  > Describe the problem your product solves.
+  <!-- > Describe the problem your product solves. -->
 
   Musicians and athletes make their careers off of timing and reflexes. If these individuals have inconsistent or poor timing, their musical or athletic success may suffer. 
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+  <!-- > Describe how your product elegantly solves the problem. -->
 
   WMT helps musicians and athletes improve their timing with a simple, fun game that also can track their progress towards their goals. Users sign in to the app, and can see their current best score(if applicable), and play the game to try and improve it. The game consists of an on-screen prompt that flashes at a consistent interval, and users try to press a key as closely timed to the prompt as possible. When complete, they receive their results, as well as potential coaching videos to help them improve.
 
-## Quote from You ##
-  > A quote from a spokesperson in your company.
+## Quote ##
+  <!-- > A quote from a spokesperson in your company. -->
 
   "What's My Time has helped me in my professional drumming career by coaching me to improve my timing daily, without being overly time-consuming or difficult to use." <i>-Jake Pepple</i>
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+  <!-- > Describe how easy it is to get started. -->
 
   All users have to do is navigate to the site in a web browser, sign up for a username (optional), and can then play the game to receive their personal results/coaching videos. 
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+  <!-- > Provide a quote from a hypothetical customer that describes how they experienced the benefit. -->
 
   "What's My Time has helped me in my daily life by improving my overall reflexes. I have felt more alert to my surroundings and am now avoiding the clumsiness that stemmed from my poor reflexes." <i>-WMT User</i>
-## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+<!-- ## Closing and Call to Action ##
+  > Wrap it up and give pointers where the reader should go next. -->
 
   Head to www.whatsmytime.com to start your journey to better time and reflexes!
