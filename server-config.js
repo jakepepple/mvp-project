@@ -7,7 +7,6 @@ const mongoose = require('mongoose');
 const User = db.User;
 
 const app = express();
-app.use(express.static('youtube-config'));
 app.use(express.static('client'))
 app.use(bodyParser.json());
 
@@ -46,6 +45,7 @@ app.get('/scores', (req, res) => {
 })
 
 app.get('/myscores', (req, res) => {
+
   const username = req.query.user;
   User.findOne({username: username}, (err, user) => {
     if (err) {

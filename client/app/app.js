@@ -21,6 +21,10 @@ const myApp = angular.module('myApp', ['ngRoute']).
           controller: "myscoresController",
           templateUrl: "../views/myscores.htm"
         }).
+        when('/videolist', {
+          controller: "videoListController",
+          templateUrl: "../views/videoList.htm"
+        }).
         otherwise('/login');
     }]);
 
