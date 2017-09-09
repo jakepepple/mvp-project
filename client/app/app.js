@@ -13,6 +13,10 @@ const myApp = angular.module('myApp', ['ngRoute']).
           templateUrl: '../views/game.htm',
           controller: 'gameController'
         }).
+        when('/myscores', {
+          controller: "myscoresController",
+          templateUrl: "../views/myscores.htm"
+        }).
         otherwise('/');
     }]);
 
