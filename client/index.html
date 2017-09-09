@@ -5,24 +5,18 @@
     <script src="./bower_components/angular/angular.js"></script>
     <script src="./bower_components/angular-route/angular-route.js"></script>
     <script src="./app/app.js"></script>
-    <script src="./app/usernameController.js"></script>
+    <script src="./app/loginController.js"></script>
     <script src="./app/scoresController.js"></script>
     <script src="./app/gameController.js"></script>
     <script src="./app/myscoresController.js"></script>
+    
   </head>
   <body>
     <h1>What's My Time?</h1>
-    <div class="login">
-      <form ng-controller="usernameController" ng-submit="submit()">
-        Login
-        <input ng-model="username" placeholder="Enter username here">
-        <input ng-model="password" type='password' placeholder="Enter password here">
-        <input type="submit">
-        <p class="loginMessage">{{userMessage}}</p>
-      </form>
-    </div>
+   
     <hr>
     <nav>
+      <a href="#!login">Login</a>
       <a href="#!game">Game</a>
       <a href="#!scores">Leaderboard</a>
       <a href="#!myscores">My Scores</a>

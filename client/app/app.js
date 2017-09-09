@@ -4,6 +4,10 @@ const myApp = angular.module('myApp', ['ngRoute']).
       
 
       $routeProvider.
+        when("/login", {
+          templateUrl: "../views/login.htm",
+          controller: "loginController"
+        }).
         when('/scores', {
           
           templateUrl: "../views/scores.htm",
@@ -17,7 +21,7 @@ const myApp = angular.module('myApp', ['ngRoute']).
           controller: "myscoresController",
           templateUrl: "../views/myscores.htm"
         }).
-        otherwise('/');
+        otherwise('/login');
     }]);
 
   

@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 const User = db.User;
 
 const app = express();
+app.use(express.static('youtube-config'));
 app.use(express.static('client'))
 app.use(bodyParser.json());
 

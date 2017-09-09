@@ -1,0 +1,9 @@
+<div class="login">
+  <form ng-controller="loginController" ng-submit="submit()">
+    Login
+    <input ng-model="username" placeholder="Enter username here">
+    <input ng-model="password" type='password' placeholder="Enter password here">
+    <input type="submit">
+    <p class="loginMessage">{{userMessage}}</p>
+  </form>
+</div>
