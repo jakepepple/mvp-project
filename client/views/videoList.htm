@@ -1,9 +1,9 @@
 <div ng-controller="videoListController" >
   <h3>Diagnostic: </h3>
   <p><b>{{diagnostic}}</b></p>
-  <div ng-repeat="video in videoList track by $index">
+  <div class="videoentry" ng-repeat="video in videoList track by $index">
     <img src="{{video.snippet.thumbnails.default.url}}">
-    <h4>{{video.snippet.title}}</h4>
+    <h4> <a href="https://www.youtube.com/watch?v={{video.id.videoId}}" target="_blank">{{video.snippet.title}}</a></h4>
     <p>{{video.snippet.description}}</p>
     </div>
   

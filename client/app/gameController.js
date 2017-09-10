@@ -29,14 +29,15 @@ myApp.controller("gameController", ['$window', '$scope', '$http', '$interval', '
       }
       $scope.resultMessage = `Great job! Your timing was within ${avgDiff} milliseconds of the computer. Keep trying for a better score though!`;
       $window.diagnostic = "Keep practicing!"
+      
     } else if (avgDiff < -100) {
       $scope.resultMessage = `Your timing was late by an average of ${-avgDiff} milliseconds. Go check out the videos tab to see resources for improvement.`;
       $window.diagnostic = "Tendency to be late. Work on not slowing down with these videos:";
-      $window.query = "Work on dragging time tendencies";
+      $window.query = "how to avoid dragging timing lesson";
     } else if (avgDiff > 100) {
       $scope.resultMessage = `Your timing was early by an average of ${avgDiff} milliseconds. Go check out the videos tab to see resources for improvement.`
       $window.diagnostic = "Tendency to be early. Work on not rushing with these videos:";
-      $window.query = "Work on rushing time tendency";
+      $window.query = "how to stop rushing";
     }
   }
 

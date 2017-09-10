@@ -1,6 +1,10 @@
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Varela Round', sans-serif; */
+
 body {
   background-color: lightcyan;
-  font-family: sans-serif
+  font-family: 'Nunito', sans-serif
 }
 
 ul {
@@ -8,7 +12,8 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #2b1770;
+    border-radius: 10px
 }
 
 li {
@@ -23,12 +28,19 @@ li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
 li a:hover {
-    background-color: #111;
+    background-color: #552390;
+    border-radius: 10px
 }
 
 
+
+.videoentry {
+  border: 1px solid #2b1770;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 2px
+}
 
 
 .screenPrompt {
