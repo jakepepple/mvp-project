@@ -28,7 +28,8 @@ app.post('/users', (req, res) => {
 
 app.put('/users', (req, res) => {
   console.log(req.body);
-  User.findOneAndUpdate({username: window.username}, req.body, (err, response) => {
+  
+  User.findOneAndUpdate({username: req.body.username}, {username: req.body.username, bestScore: req.body.bestScore}, (err, response) => {
     if (err) {
       console.error(err);
     } else {

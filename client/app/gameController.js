@@ -3,7 +3,7 @@ myApp.controller("gameController", ['$window', '$scope', '$http', '$interval', '
   $scope.userResults = [];
   $scope.computerResults = [];
   $scope.resultMessage = "";
-  $window.diagnostic = "You haven't played the game yet! Go play and come back for personalized results.";
+  $window.diagnostic;
   $window.query;
   let averageMsOff;
   
@@ -36,12 +36,13 @@ myApp.controller("gameController", ['$window', '$scope', '$http', '$interval', '
     } else if (avgDiff > 100) {
       $scope.resultMessage = `Your timing was early by an average of ${avgDiff} milliseconds. Go check out the videos tab to see resources for improvement.`
       $window.diagnostic = "Tendency to be early. Work on not rushing with these videos:";
-      $window.query = "Work on rushing tendency";
+      $window.query = "Work on rushing time tendency";
     }
   }
 
   const postResults = (result) => {
     $http.put('/users', {
+      username: $window.username,
       bestScore: result
     }).then((response) => {
       console.log('successful put');
