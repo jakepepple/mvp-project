@@ -70,7 +70,11 @@ myApp.controller("gameController", ['$window', '$scope', '$http', '$interval', '
           } else {
             let avgDiff = calculateMsOff($scope.userResults, $scope.computerResults);          
             renderResultMessage(avgDiff);
-            postResults(avgDiff);
+            if (avgDiff < 0) {
+              postResults(-avgDiff)
+            } else {
+              postResults(avgDiff);
+            }
           }
         }, 1000)
       });
