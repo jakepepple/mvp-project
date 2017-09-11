@@ -33,7 +33,10 @@ li a:hover {
     border-radius: 10px
 }
 
-
+.score {
+  border: 1px solid #2b1770;
+  border-radius: 10px
+}
 
 .videoentry {
   border: 1px solid #2b1770;

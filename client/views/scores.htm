@@ -1,5 +1,9 @@
 <div ng-controller="scoresController">
   <div ng-repeat="score in scores track by $index">
-    <p>Username: {{score.username}} -- Best Score: {{score.bestScore}}ms avg
-  
+    <div class="score">
+      <h4>Username:</h4>
+      <p> {{score.username}}</p>
+      <h4> Best Score:</h4>
+      <p> {{score.bestScore}} ms off</p>
+    </div>
   </div>
